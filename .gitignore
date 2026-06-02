@@ -6,3 +6,11 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# local env files
+.env.local
+.env.*.local
+
+# Databases and secrets
+db.json
+firebase-blueprint.json

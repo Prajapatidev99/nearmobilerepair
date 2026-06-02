@@ -1,20 +1,26 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# NearMobileRepair 📱🔧
 
-# Run and deploy your AI Studio app
+NearMobileRepair is a modern, serverless web application that provides seamless doorstep mobile repair services for customers in Ahmedabad. 
 
-This contains everything you need to run your app locally.
+Built with React, Vite, Tailwind CSS, and Firebase, this platform offers a fast, reliable, and user-friendly experience for booking repairs, tracking statuses, and managing operations.
 
-View your app in AI Studio: https://ai.studio/apps/53d7c35a-91ea-4f2f-86bf-425371044936
+## ✨ Features
 
-## Run Locally
+- **Instant Price Estimates:** Customers can get immediate repair quotes based on their phone brand, model, and issue.
+- **Secure Authentication:** Passwordless login and registration powered by Google and Firebase Email Auth.
+- **Real-Time Database:** All bookings and user profiles are securely stored and synced in real-time using Firebase Firestore.
+- **Live Status Tracking:** Customers can track the exact status of their repair using their Booking ID or by logging in.
+- **Admin Dashboard:** A secure, dedicated dashboard for administrators to view, manage, and update the status of all incoming bookings.
+- **SEO & PWA Optimized:** Built to load instantly and rank highly on search engines to drive organic local traffic.
 
-**Prerequisites:**  Node.js
+## 🚀 Tech Stack
 
+- **Frontend:** React 19, TypeScript, Vite
+- **Styling:** Tailwind CSS, Lucide React (Icons), Motion (Animations)
+- **Backend & Database:** Firebase Authentication, Cloud Firestore
+- **Routing:** React Router DOM
+- **Deployment Ready:** Configured with `vercel.json` for instant Vercel deployment.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🔒 Security Note
+This repository does not contain any private databases or sensitive customer information. All user data is securely managed via Google Cloud (Firebase). 
+*(Note: Firebase client configuration keys are included for build purposes, which is a safe practice per Google's official documentation, provided proper Firestore Security Rules are applied).*
