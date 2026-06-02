@@ -96,6 +96,38 @@ export default function BookingForm() {
       }
 
       const id = await createBooking(payload);
+
+      // Send Email Notification via Web3Forms
+      try {
+        await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            access_key: "32241d17-6db6-418f-9013-9fabeac02e7f", // <--- User needs to replace this
+            subject: `🚨 New Repair Booking: ${payload.brand} ${payload.model}`,
+            from_name: "NearMobileRepair System",
+            message: `
+New Repair Request!
+-------------------
+Booking ID: ${id}
+Customer Name: ${payload.name}
+Phone Number: ${payload.mobile}
+
+Device: ${payload.brand} ${payload.model}
+Issue: ${payload.issue}
+
+Address: ${payload.address}
+Time Slot: ${payload.timeSlot}
+Payment Method: ${payload.paymentMethod}
+
+Please log in to the admin dashboard (http://nearmobilerepair.vercel.app/admin) to manage this booking.
+            `
+          })
+        });
+      } catch (e) {
+        console.error("Email notification failed", e);
+      }
+
       setBookingId(id);
       setSuccess(true);
       setStep(1);
