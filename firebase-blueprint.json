@@ -1,0 +1,31 @@
+{
+  "entities": {
+    "booking": {
+      "title": "Booking",
+      "description": "A repair booking",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "mobile": { "type": "string" },
+        "brand": { "type": "string" },
+        "model": { "type": "string" },
+        "issue": { "type": "string" },
+        "address": { "type": "string" },
+        "timeSlot": { "type": "string" },
+        "paymentMethod": { "type": "string" },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "completed", "cancelled"] },
+        "createdAt": { "type": "string" },
+        "rating": { "type": "number" },
+        "review": { "type": "string" },
+        "reviewSubmitted": { "type": "boolean" }
+      },
+      "required": ["name", "mobile", "brand", "model", "issue", "address", "createdAt", "status"]
+    }
+  },
+  "firestore": {
+    "bookings/{bookingId}": {
+      "schema": { "$ref": "#/entities/booking" },
+      "description": "Repair bookings"
+    }
+  }
+}
