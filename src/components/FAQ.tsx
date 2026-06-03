@@ -21,6 +21,10 @@ export default function FAQ() {
     {
       q: "Is it safe to repair at home?",
       a: "Absolutely. Our technicians are background-verified and repair the device right in front of you, ensuring your data privacy."
+    },
+    {
+      q: "Which areas in Ahmedabad do you provide service?",
+      a: "We provide fast doorstep mobile repair service across Prahladnagar, Satellite, SG Highway, Iskon, Bodakdev, Vastrapur, South Bopal, Thaltej, Makarba, Anandnagar and nearby Ahmedabad areas."
     }
   ];
 

@@ -1,10 +1,11 @@
 import { MapPin } from "lucide-react";
 
 const areas = [
-  "Navrangpura", "Vastrapur", "Satellite", "Bopal", "SG Highway",
-  "Bodakdev", "Prahlad Nagar", "Thaltej", "Chandkheda", "Ghatlodia",
+  "Prahladnagar", "Satellite", "SG Highway", "Iskon", "Bodakdev",
+  "Vastrapur", "South Bopal", "Thaltej", "Makarba", "Anandnagar",
+  "Navrangpura", "Bopal", "Chandkheda", "Ghatlodia",
   "Naranpura", "Maninagar", "Nikol", "CG Road", "Ambawadi",
-  "Paldi", "Iscon", "Drive-in Road", "Memnagar", "New Ranip",
+  "Paldi", "Drive-in Road", "Memnagar", "New Ranip",
 ];
 
 export default function Areas() {
