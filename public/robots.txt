@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://nearmobilerepair.com/sitemap.xml
+Sitemap: https://nearmobilerepair.vercel.app/sitemap.xml
